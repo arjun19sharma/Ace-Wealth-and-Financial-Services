@@ -384,6 +384,29 @@ section{
     background:white;
 
 }
+.hamburger span{
+
+    transition:.3s;
+
+}
+
+.hamburger.active span:nth-child(1){
+
+    transform:translateY(7px) rotate(45deg);
+
+}
+
+.hamburger.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.hamburger.active span:nth-child(3){
+
+    transform:translateY(-7px) rotate(-45deg);
+
+}
 
 /* =========================
    HERO
@@ -1192,7 +1215,55 @@ section{
 
     .nav-links{
 
+        position:absolute;
+
+        top:80px;
+
+        left:0;
+
+        width:100%;
+
+        background:#0d0d0d;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:0;
+
+        padding:20px 0;
+
         display:none;
+
+        border-top:1px solid rgba(255,255,255,.08);
+
+        box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+        z-index:999;
+
+    }
+
+    .nav-links li{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .nav-links a{
+
+        display:block;
+
+        width:100%;
+
+        padding:16px;
+
+    }
+
+    .nav-links.show-menu{
+
+        display:flex;
 
     }
 
